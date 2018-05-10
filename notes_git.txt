@@ -1,0 +1,38 @@
+﻿安裝git後
+git config --global user.name "hhwang"
+git config --global user.email "wang@gmail.com"
+
+建立一個資料夾,裡面放page1.txt
+
+將目錄變成git的工作目錄
+git init
+
+查詢工作目錄中的檔案狀態
+git status
+
+將untracked file 變成 tracked file 
+將file加到staging area
+git add page1.txt  
+
+將staging的檔案加到repository
+git commit -m "first commit"
+
+查看commit紀錄
+git log
+git log --oneline
+
+修改最後一次commit的訊息
+git commit --amend -m "add page3.txt"
+
+
+staging area(暫存區)要將檔案退回到working directory(工作區)
+退回的方式有兩種
+1.repository 沒有檔案 page4.txt(new file)
+git rm --cached page4.txt
+2. respository有這個檔案 page3.txt(modified)
+git reset HEAD page3.txt
+退回之後，可以使用git checkout page3.txt
+這個指令會從repository(儲存區)重新載入page3.txt
+
+
+
